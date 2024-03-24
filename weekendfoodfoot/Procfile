@@ -1,1 +1,1 @@
-web: gunicorn weekendfoodfoot.wsgi
+web: gunicorn weekendfoodfoot.wsgi --log-file -

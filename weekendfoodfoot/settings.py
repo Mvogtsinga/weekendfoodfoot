@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'weekendfoodfoot.urls'
@@ -77,16 +79,8 @@ WSGI_APPLICATION = 'weekendfoodfoot.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nhlsuwvi',  # Votre nom de base de données par défaut
-        'USER': 'nhlsuwvi',  # Votre nom d'utilisateur
-        'PASSWORD': 'qFt6DGUFqrhc9zujX_qLJELpImhn664a',  # Votre mot de passe
-        'HOST': 'floppy.db.elephantsql.com',  # Votre hôte ElephantSQL
-        'PORT': '5432',  # Le port standard PostgreSQL
-    }
+    'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -123,6 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
