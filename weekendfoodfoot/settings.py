@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +29,7 @@ SECRET_KEY = 'django-insecure-i_y(s+ca5$)-n0kzfh#p9$3$#o0tpx)u$%x+(sm-hy)59on=sq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,19 +80,19 @@ WSGI_APPLICATION = 'weekendfoodfoot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nhlsuwvi',  # Votre nom de base de données par défaut
-        'USER': 'nhlsuwvi',  # Votre nom d'utilisateur
-        'PASSWORD': 'qFt6DGUFqrhc9zujX_qLJELpImhn664a',  # Votre mot de passe
-        'HOST': 'floppy.db.elephantsql.com',  # Votre hôte ElephantSQL
-        'PORT': '5432',  # Le port standard PostgreSQL
-    }
-}
 # DATABASES = {
-#     'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'nhlsuwvi',  # Votre nom de base de données par défaut
+#         'USER': 'nhlsuwvi',  # Votre nom d'utilisateur
+#         'PASSWORD': 'qFt6DGUFqrhc9zujX_qLJELpImhn664a',  # Votre mot de passe
+#         'HOST': 'floppy.db.elephantsql.com',  # Votre hôte ElephantSQL
+#         'PORT': '5432',  # Le port standard PostgreSQL
+#     }
 # }
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -128,6 +130,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+django_heroku.settings(locals())
 
 
 # Default primary key field type
