@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'weekendfoodfoot.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+import dj_database_url
 DATABASES = {
     'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
 }
@@ -131,5 +131,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'votre.adresse@gmail.com'
-EMAIL_HOST_PASSWORD = 'votre_mot_de_passe'
+EMAIL_HOST_USER = 'mvogtsinga@gmail.com'
+EMAIL_HOST_PASSWORD = 'AKtreize13'
