@@ -77,10 +77,20 @@ WSGI_APPLICATION = 'weekendfoodfoot.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-import dj_database_url
+
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nhlsuwvi',  # Votre nom de base de données par défaut
+        'USER': 'nhlsuwvi',  # Votre nom d'utilisateur
+        'PASSWORD': 'qFt6DGUFqrhc9zujX_qLJELpImhn664a',  # Votre mot de passe
+        'HOST': 'floppy.db.elephantsql.com',  # Votre hôte ElephantSQL
+        'PORT': '5432',  # Le port standard PostgreSQL
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
