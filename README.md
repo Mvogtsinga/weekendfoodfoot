@@ -34,7 +34,16 @@ The first design of this project was to choice and appeling picture for the home
 
 <img src="![userlogin wff](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/8491c30e-b6b0-4453-a31b-d654bcfa7ac2)" "widht="200px" height="200px">
 
-My first preoccupation was to build a direct connection with a potential user. To attempt my goal I chose a mixture of Burger and 
+<img src="![signup wff](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0ef76d89-4f78-4716-bd44-3f61507c8e02)" "widht="150px" "height="150px">
+
+<img src="![reservation wff](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/b9f69e95-6988-4c44-b204-7e90d4b4f884)" "widht="150px" "height="100px">
+
+<img src="![menu wff](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/aaf7196f-a355-4eea-adc7-ba78e2ba61f6)" "widht="150px" "height="100px">
+
+
+
+
+My first preoccupation was to build a direct connection with a potential user. To attempt my goal I chose a mixture of Burger and hell color. 
 
 Site User
 - Someone or a group of people over 18 from the sport's area
