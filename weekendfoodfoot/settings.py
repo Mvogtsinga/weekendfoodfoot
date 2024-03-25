@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
 import dj_database_url
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,7 +26,7 @@ SECRET_KEY = 'django-insecure-i_y(s+ca5$)-n0kzfh#p9$3$#o0tpx)u$%x+(sm-hy)59on=sq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -42,18 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'weekendfoodfoot',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'weekendfoodfoot.urls'
@@ -80,19 +76,18 @@ WSGI_APPLICATION = 'weekendfoodfoot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'nhlsuwvi',  # Votre nom de base de données par défaut
-#         'USER': 'nhlsuwvi',  # Votre nom d'utilisateur
-#         'PASSWORD': 'qFt6DGUFqrhc9zujX_qLJELpImhn664a',  # Votre mot de passe
-#         'HOST': 'floppy.db.elephantsql.com',  # Votre hôte ElephantSQL
-#         'PORT': '5432',  # Le port standard PostgreSQL
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi', conn_max_age=600)
+    'default': dj_database_url.config(
+        default='postgres://nhlsuwvi:qFt6DGUFqrhc9zujX_qLJELpImhn664a@floppy.db.elephantsql.com:5432/nhlsuwvi',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -130,9 +125,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-django_heroku.settings(locals())
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -145,5 +138,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mvogtsinga@gmail.com'
-EMAIL_HOST_PASSWORD = 'AKtreize13'
+EMAIL_HOST_USER = 'votre.adresse@gmail.com'
+EMAIL_HOST_PASSWORD = 'votre_mot_de_passe'
