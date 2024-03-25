@@ -26,10 +26,8 @@ A responsive,restaurant website with registration and table booking system with 
 
 # UX
 # Database planning 
-## Data structure
-## Data models
-### UserProfile model
-### Bookings model
+<img src="![IMG-20240325-WA0030](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/38c54b06-f9d6-456d-b70a-154f4c40fab0)"widht="25px" height="25px">
+
 
 # UX design
 # Overview
