@@ -1,9 +1,9 @@
 <img src="![logowwf](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0afe3128-79f2-43a7-9e0c-38750440edb7)
-"widht="10%" height="7%">
+"widht="4px" height="4px">
 
 
-Welcome to WEEKENDFOODFOOT Restaurant <br>
-A restaurant website <br>
+# Welcome to WEEKENDFOODFOOT Restaurant <br>
+# A restaurant website <br>
 
 A responsive,restaurant website with registration and table booking system with different formats for customers.create as a final Project Portfolio during the Full stack Software Developer-Skills Bootcamp at Code Institute.
 [Link to the live site here](https://wff-ba2fd89f325f.herokuapp.com/)
