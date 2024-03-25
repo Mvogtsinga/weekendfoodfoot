@@ -1,4 +1,4 @@
-<img src="![IMG-20240325-WA0025](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/f4114137-9f45-45ca-b59a-091b84f4c33f)"widht="8px" height="5px">
+<img src="![IMG-20240325-WA0025](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/f4114137-9f45-45ca-b59a-091b84f4c33f)"widht="10%" height="7%">
 
 
 Welcome to WEEKENDFOODFOOT Restaurant <br>
