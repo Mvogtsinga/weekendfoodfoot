@@ -14,10 +14,6 @@ A responsive,restaurant website with registration and table booking system with 
 <ol>
   <li>UX</li>
   <li>Agile Development </li>
-  <li>Features implemented </li>
-  <li>Features Left to implement </li>
-  <li>Technology used</li>
-  <li>Testing</li>
   <li>Bugs</li>
   <li>Deployment</li>
   <li>Resources</li>
@@ -56,16 +52,6 @@ Goals for the website
 The next stage of UX design planning was the basic wireframes using Basalmiq. I wanted to create a pleasing and easy to navigate website for the potential user. 
 
 
-# Agile Development
-
-## Overview
-
-# Features implemented
-
-# Features Left to implement
-
-
-
 # Technology used
 The site has been built with the following tech and tools:
 <ol>
@@ -92,18 +78,6 @@ But some  bugs occurred during the development of the project such as:
 Deploying the project to Heroku. This was solved by creating a new app.
 
 
-There was an issue with trying to get the dropdown menu to work. By mistake I hadn't put the link to the JavaScript file in the html file. After I added the link, the dropdown menu worked but was only showing the dropdown part while it was being pressed. Also the words were not visible and the width of the dropdown was very narrow and that's probably why the words weren't on it. I solved the issue by changing the css.
-
-The header was set to position: fixed and was covering the content. To solve this I increased the size of the margin at the top of the main section.
-
-I had problems deploying my project to Heroku. This was solved by adding the correct Config Vars to Heroku.
-
-The navigation menu was showing the same things for signed in users as signed out users. This was solved by changing the urls.
-
-The text on the buttons was not fitting on the buttons in the mobile view so I set the font size in percentage instead of pixels.
-
-I was trying to prevent double bookings by filtering out appointments that had been booked. It wasn't working and the booked appointments were still showing up on the list of available appointments. This was solved by editing the booking view.
-
 # Deployment
 
 Heroku was the main deployements Tools for this project. I add a Procfile and requirements.txt files to the project.
@@ -114,9 +88,26 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 
 "Deploy Branch" was selected to manually deploy the project.
 
-# Resources
+# resources
+
+- Code Institute Full Stack Development course materials
+- Django documentation
+- Crispy forms docs
+- Bootstrap docs
+- Stack overflow
+- Slack
+- Back to Top
+
+
 
 # Credits and acknowledgements
+
+## Credits
+
+- Images : Unsplash
+- 
+
+## Acknowledgements
 
 - I would like to thank my Code Institute mentor for their support throughout the development of this project.
 - I would like to thank the Code Institute Slack community for the moral support; it kept me going during periods of self doubt and imposter syndrome.
