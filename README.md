@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
 
 Welcome to WEEKENDFOODFOOT Restaurant <br>
 A restaurant website <br>
@@ -77,6 +77,10 @@ The next stage of UX design planning was the basic wireframes using Basalmiq. I 
 # Resources
 
 # Credits and acknowledgements
+
+
+
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 
 
