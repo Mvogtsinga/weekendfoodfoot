@@ -1,7 +1,7 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome to WEEKENDFOODFOOT Restaurant <br>
-A restaurant website
+A restaurant website <br>
 
 A responsive,restaurant website with registration and table booking system with different formats for customers.create as a final Project Portfolio during the Full stack Software Developer-Skills Bootcamp at Code Institute.
 [Link to the live site here](https://wff-ba2fd89f325f.herokuapp.com/)
@@ -15,24 +15,12 @@ A responsive,restaurant website with registration and table booking system with 
   <li>Features implemented </li>
   <li>Features Left to implement </li>
   <li>Technology used</li>
-  <li><Testing/li>
+  <li>Testing</li>
   <li>Bugs</li>
   <li>Deployment</li>
   <li>Resources</li>
-  <li>Credits</li>
+  <li>Credits and acknowledgements </li>
 </ol>
-1- UX
-2- Agile Development
-3-Features implemented
-4-Features Left to implement
-5-Technology used
-6-Testing
-7-Bugs
-8-Deployment
-9-Resources
-10-Credits and acknowledgements
-
-
 
 # UX
 # Database planning 
@@ -72,6 +60,23 @@ The next stage of UX design planning was the basic wireframes using Basalmiq. I 
 
 ## Overview
 
+# Features implemented
+
+# Features Left to implement
+
+
+
+# Technology used
+
+# Testing
+
+# Bugs
+
+# Deployment
+
+# Resources
+
+# Credits and acknowledgements
 
 
 
