@@ -9,16 +9,17 @@ A responsive,restaurant website with registration and table booking system with 
 -By Aubin KOENIGSSOHN-
 
 # Table of contents
-1.UX
-2.Agile Development
-3.Features implemented
-4.Features Left to implement
-5.Technology used
-6.Testing
-7. Bugs
-8. Deployment
-9. Resources
-10. Credits and acknowledgements
+
+1- UX
+2- Agile Development
+3-Features implemented
+4-Features Left to implement
+5-Technology used
+6-Testing
+7-Bugs
+8-Deployment
+9-Resources
+10-Credits and acknowledgements
 
 
 
@@ -54,6 +55,13 @@ Goals for the website
 
 # Wireframes
 The next stage of UX design planning was the basic wireframes using Basalmiq. I wanted to create a pleasing and easy to navigate website for the potential user. 
+
+
+# Agile Development
+
+## Overview
+
+
 
 
 
