@@ -1,5 +1,5 @@
 <img src="![logowwf](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0afe3128-79f2-43a7-9e0c-38750440edb7)
-"widht="200" height="200">
+"widht="50" height="50">
 
 
 # Welcome to WEEKENDFOODFOOT Restaurant <br>
