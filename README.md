@@ -1,9 +1,9 @@
 <img src="![logowwf](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0afe3128-79f2-43a7-9e0c-38750440edb7)
-"widht="4px" height="4px">
+"widht="200" height="200">
 
 
 # Welcome to WEEKENDFOODFOOT Restaurant <br>
-# A restaurant website <br>
+### A restaurant website <br>
 
 A responsive,restaurant website with registration and table booking system with different formats for customers.create as a final Project Portfolio during the Full stack Software Developer-Skills Bootcamp at Code Institute.
 [Link to the live site here](https://wff-ba2fd89f325f.herokuapp.com/)
@@ -24,25 +24,15 @@ A responsive,restaurant website with registration and table booking system with 
  10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
 
 
-# Table of contents
-<ol>
-  <li>UX</li>
-  <li>Agile Development </li>
-  <li>Bugs</li>
-  <li>Deployment</li>
-  <li>Resources</li>
-  <li>Credits and acknowledgements </li>
-</ol>
-
 # UX
-# Database planning 
+## Database planning 
 <img src="![IMG-20240325-WA0030](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/38c54b06-f9d6-456d-b70a-154f4c40fab0)"widht="25px" height="25px">
 
 
-# UX design
+## UX design
 
-# Agile Development
-# Overview
+
+## Overview
 ## Design
 Initial design planing
 The first design of this project was to choice and appeling picture for the homepage and login features prototypes.
@@ -73,28 +63,189 @@ Goals for the website
 - To allow customers to view in advance the table availability
 - To safely manage the food logistic
 
-# Wireframes
+## Wireframes
 The next stage of UX design planning was the basic wireframes using Basalmiq. I wanted to create a pleasing and easy to navigate website for the potential user. 
 
 
-# Technology used
-The site has been built with the following tech and tools:
-<ol>
-  <li>HTML5</li>
-  <li>CSS</li>
-  <li>Python</li>
-  <li>Django - database framework</li>
-  <li>ElephantSQL - database hosting</li>
-  <li>Cloudinary - media hosting</li>
-  <li>Bootstrap 5</li>
-  <li>GitHub Repo - code storage</li>
-  <li>Git - version control</li>
-  <li>GitPod & VS Code - IDE</li>
-  <li>Heroku - live site hosting</li>
-</ol>
-
 # Agile Development
+
+# features-implemented
+
+### Navbar and Footer:
+
+- Navbar and footer are present on every page
+- Navbar's content changes depending on user authentication, allowing access to profile and user bookings
+- Footer includes café's opening times, social links and address to provide the necessary informations in an easy way.
+
+### Index page:
+
+- The homepage provides the links to booking and about us page.
+- It can be accessed without signing in.
+
+### About Us page:
+
+- Main page includes a short information about the café and set of 4 cards with pictures and description.
+- Each of the card includes the button, that triggers a fullscreen modal.
+- The modals contain informations about the menu, contact details with embedded google maps, link to booking page and gallery with cat pictures (cat carousel).
+- About Us page can be accessed without signing in.
+
+### Authentication and profile management:
+
+- User can sign up to create their profile 
+- User can log in to their account and update their informations
+- User can delete their account alltogether with all their data
+- The authentication process is safe thanks to [Django-AllAuth](https://github.com/pennersr/django-allauth) and csrf tokens.
+
+### Bookings:
+
+- User can pass their data to create a booking.
+- User can edit their selected booking.
+- Currently the initial version of booking cancellation view has not been fully implemented. I decided to implement an automatic delete_booking view, that allows User to quickly remove their booking from the system.
+
+### Responsiveness:
+
+- Website is responsive thanks to Bootstrap and media queries applied.
+- There's a hamburger navbar on small devices.
+
+##### [ Back to Top ](#table-of-contents)
+
+# feature left to implement
+
+Features Left to Implement
+
+- [USER STORY: BOOKING CANCELLATION] (https://wff-ba2fd89f325f.herokuapp.com/account/) - As I've mentioned the initial version of this model is left for now since customer can currently fully delete their booking. 
+
+##### [ Back to Top ](#table-of-contents)
+
+# Technology used 
+
+The site has been built with the following tech and tools:
+
+- Html - for page structure
+- CSS - for custom styling
+- Python - for the backend
+- Javascript - for timeout in messages
+- Django - framework used to build this project
+- Jinja - templating language rendering logic within html documents
+- Bootstrap 5 - front end framework used by me alongside Django, helps with fast and efficient styling
+- Heroku PostgreSQL - used as the database
+- Font Awesome - for social media icons
+- Google Fonts- currently only for the hero image font
+- GitHub - for storing the code and for the projects Kanban
+- Heroku - for hosting and deployement of this project
+- Cloudinary - hosting the static files 
+- Git - version control tool
+
+##### [ Back to Top ](#table-of-contents)
+
+
+
 # Testing
+
+### Responsiveness
+
+I was testing for responsiveness on an Ideapad laptop and a Samsung Galaxy A5 using the most up to date versions of Google Chrome, Mozilla Firefox and Opera versions. For more detailed testing I was using Google DevTools.
+
+> Index page:
+
+![Index page](static/images/readme-images/responsive-index.png)
+
+
+> About Us page:
+
+![Index page](static/images/readme-images/responsive-about.png)
+
+
+> Sign Up page:
+
+![Index page](static/images/readme-images/responsive-signup.png)
+
+
+> Sign In page:
+
+![Index page](static/images/readme-images/responsive-sign-in.png)
+
+
+
+### Manual testing
+
+#### Account Registration Tests
+| Test |Result  |
+|--|--|
+| User can create profile | Pass |
+| User can log into profile | Pass |
+| User can log out of profile | Pass |
+| Messages are displaying | Pass |
+| Messages are dismissable by button and timeout | Pass |
+
+
+
+---
+
+#### User Navigation Tests
+
+| Test | Result  |
+|--|--|
+| User can easily navigate to Bookings | Pass |
+| User can access About Us page| Pass|
+| User access their account page|Pass|
+| User can access the card content in About Us|Pass|
+| SuperUser can access admin page|Pass|
+
+
+
+---
+
+#### Account Authorisation Tests
+
+| Test | Result  |
+|--|--|
+| Only Superuser can access admin page |Pass|
+| Non authorised user book a table | Pass |
+| Non authorised user won't access profile page| Pass|
+
+
+
+---
+
+#### Booking and Profile Tests
+
+| Test |Result  |
+|--|--|
+|User can make a booking | Pass |
+|User can view all of their bookings | Pass |
+|User can delete their booking | Pass |
+|User can edit booking | Pass |
+|User can make more than one booking | Pass |
+|User can delete their account | Pass |
+|User can edit their information | Pass |
+|User can see the confirmation information | Pass |
+
+
+
+---
+
+#### Admin Tests
+
+| Test |Result  |
+|--|--|
+|Items display correctly on front-end when updated / added |Pass|
+|Admin can confirm or decline bookings |Pass|
+
+
+##### [ Back to Top ](#table-of-contents)
+
+---
+ 
+# Known bugs 
+
+- I observed one blue submit button- it is automatically generated by crispy forms and somehow the form settings did not applied to this button. It's a small bug of low priority for me at the current stage.
+- There's small image clipping during the cat carousel transitions on smaller screens.
+- No error message displaying when passing wrong login details
+- The function that was supposed to prevent booking dates in the past is currently preventing nothing, unfortunately... You may be brave and try to trick the system into timetravelling, but Admin will always see what day the booking was made on anyway and won't accept such a silly tricks!
+
+
+##### [ Back to Top ](#table-of-contents)
 
 # Bugs
 No current bugs in the project.
