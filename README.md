@@ -10,6 +10,20 @@ A responsive,restaurant website with registration and table booking system with 
 
 -By Aubin KOENIGSSOHN-
 
+## Table of contents 
+
+ 1. [ UX ](#ux)
+ 2. [ Agile Development ](#agile-development)
+ 3. [ Features implemented ](#features-implemented)  
+ 4. [ Features Left to Implement ](#features-left-to-implement)  
+ 5. [ Technology used ](#technology-used) 
+ 6. [ Testing ](#testing)  
+ 7. [ Bugs ](#known-bugs)  
+ 8. [ Deployment](#deployment)
+ 9. [ Resources ](#resources)  
+ 10. [ Credits and acknowledgements ](#credits-and-acknowledgements)
+
+
 # Table of contents
 <ol>
   <li>UX</li>
