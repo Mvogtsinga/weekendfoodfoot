@@ -26,6 +26,8 @@ A responsive,restaurant website with registration and table booking system with 
 
 
 # UX design
+
+# Agile Development
 # Overview
 ## Design
 Initial design planing
@@ -77,7 +79,7 @@ The site has been built with the following tech and tools:
   <li>Heroku - live site hosting</li>
 </ol>
 
-
+# Agile Development
 # Testing
 
 # Bugs
@@ -114,6 +116,7 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 ## Credits
 
 - Images : Unsplash
+- templates: code institute
 - 
 
 ## Acknowledgements
