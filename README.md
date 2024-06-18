@@ -68,6 +68,36 @@ The next stage of UX design planning was the basic wireframes using Basalmiq. I 
 
 
 # Agile Development
+## Overview
+
+I started this project alongside GitHub Projects with intention of planning and tracking the workflow to manage the expected workload. After setting out the epics for my project I broke them down into a set of user stories and smaller tasks, to help me monitor my progress and finish the website in time. Outside of user stories I also included a separate issues for creating each module of this README file, as I simply found it more motivating this way. To see the project's Kanban page please click [here](https://github.com/users/TulaUnogi/projects/3/views/1).
+
+## User Stories
+
+Initial stage of the project included stepping into the shoes of the future User. I thought about the features and functionality I would expect from the first use of the website and based on that I created a set of 12 User Stories. I labelled 10 of them as mandatory, as they provide the core functionality and source of important informations for the User. The remaining 2 Stories are labelled as NINTH- Nice To Have, Not Important, as they provide some improvements, but are not necessary for the User to enjoy the website's base functionality. 
+
+The User Stories include the acceptance criteria and are broken down into smaller, bite- size tasks that I would tick on completion, so I could easily track my progress. During the coding session I would record the encountered bugs, issues and solutions related to the Story in the comments below. Once all of the tasks in the Issue are completed I would move the User Story form "In progress" to "Completed" card im my project's Kanban.
+
+> List of Mandatory User Stories
+
+1. [USER STORY: DEPLOYMENT](https://github.com/TulaUnogi/cat-beans-cafe/issues/16)
+2. [USER STORY: ADMIN PANEL](https://github.com/TulaUnogi/cat-beans-cafe/issues/17)
+3. [USER STORY: CREATE AN ACCOUNT](https://github.com/TulaUnogi/cat-beans-cafe/issues/18)
+4. [USER STORY: EDITING PROFILE](https://github.com/TulaUnogi/cat-beans-cafe/issues/22)
+5. [USER STORY: DELETING PROFILE](https://github.com/TulaUnogi/cat-beans-cafe/issues/23)
+6. [USER STORY: TABLE BOOKING](https://github.com/TulaUnogi/cat-beans-cafe/issues/21)
+7. [USER STORY: NAVBAR AND FOOTER](https://github.com/TulaUnogi/cat-beans-cafe/issues/20)
+8. [USER STORY: ABOUT US](https://github.com/TulaUnogi/cat-beans-cafe/issues/19)
+9. [USER STORY: MENU](https://github.com/TulaUnogi/cat-beans-cafe/issues/26)
+10. [USER STORY: GOOGLE MAPS](https://github.com/TulaUnogi/cat-beans-cafe/issues/25)
+
+> NINTH: Not Important, Nice To Have
+
+11. [USER STORY: CAT CAROUSEL](https://github.com/TulaUnogi/cat-beans-cafe/issues/24)
+12. [USER STORY: BOOKING CANCELLATION](https://github.com/TulaUnogi/cat-beans-cafe/issues/27)
+
+##### [ Back to table of contents ](#table-of-contents)
+
 
 # features-implemented
 
@@ -107,7 +137,7 @@ The next stage of UX design planning was the basic wireframes using Basalmiq. I 
 - Website is responsive thanks to Bootstrap and media queries applied.
 - There's a hamburger navbar on small devices.
 
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 # feature left to implement
 
@@ -115,7 +145,7 @@ Features Left to Implement
 
 - [USER STORY: BOOKING CANCELLATION] (https://wff-ba2fd89f325f.herokuapp.com/account/) - As I've mentioned the initial version of this model is left for now since customer can currently fully delete their booking. 
 
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 # Technology used 
 
@@ -136,7 +166,7 @@ The site has been built with the following tech and tools:
 - Cloudinary - hosting the static files 
 - Git - version control tool
 
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 
 
@@ -233,7 +263,7 @@ I was testing for responsiveness on an Ideapad laptop and a Samsung Galaxy A5 us
 |Admin can confirm or decline bookings |Pass|
 
 
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 ---
  
@@ -245,7 +275,7 @@ I was testing for responsiveness on an Ideapad laptop and a Samsung Galaxy A5 us
 - The function that was supposed to prevent booking dates in the past is currently preventing nothing, unfortunately... You may be brave and try to trick the system into timetravelling, but Admin will always see what day the booking was made on anyway and won't accept such a silly tricks!
 
 
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 # Bugs
 No current bugs in the project.
@@ -264,6 +294,87 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 
 "Deploy Branch" was selected to manually deploy the project.
 
+# Deployment
+
+#### The deployment stage of the website should follow the steps below:
+
+> Create the Heroku app
+
+- Sign up / Log in to Heroku
+- In Heroku Dashboard page select 'New' and then 'Create New App'
+- Name a project - I decided on the Cat Beans Café (the app's name must be unique)
+- Select EU as that was my region in the moment of creating the app
+- Select "Create App"
+- In the "Deploy" tab choose GitHub as the deployment method
+- Connect your GitHub account/ find and connect your GitHub repository
+
+> Set up enviroment variables
+
+- In the Django app editor create env.py in the top level
+- In env.py import os
+- In env.py set up necessary enviroment variables:
+  - add a secret key using: os.environ['SECRET_KEY'] = 'your secret key'
+  - for the database variable the line should include os.environ['DATABASE_URL']= 'Paste the database link in here'
+  - in settings.py replace value of SECRET_KEY variable with os.environ.get('SECRET_KEY')
+  - in settings.py change the value of DATABASES variable to 'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+- In Django app's settings.py on top of the file add:
+```
+from pathlib import Path
+import os
+import dj_database_url
+if os.path.isfile('env.py'):
+    import env
+```
+- Navigate to the "Settings" tab in Heroku.
+- Open the "Config Vars" section and add DATABASE_URL as Key and the database link from app's env.py as Value
+- Add SECRET_KEY for the Key value and the secret key value from env.py as the Value
+- In the terminal migrate the models over to the new database connection
+- In settings.py add the STATIC files settings as follows:
+```
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+```
+- Change the templates directory in settings.py to: TEMPLARES_DIR = os.path.join(BASE_DIR, 'templates')
+- In TEMPLATES variable change the 'DIRS' key to look like this: 'DIRS': [TEMPLARES_DIR],
+- Add Heroku to the ALLOWED_HOSTS list (the format will be your-app-name.herokuapp.com, you can copy it from the Domains section in Settings tab in your Heroku app)
+- If you haven't done that up to this point, then create in your Django app's code editor new top level folders: static and templates
+- Create a new file on the top level directory - Procfile, remembering to use a capital letter
+- Within the Procfile add following:
+```
+web: guincorn PROJECT_NAME.wsgi
+``` 
+- In the terminal, add the changed files, commit and push to GitHub
+
+> Heroku deployment
+
+- In Heroku, navigate to the Deployment tab and deploy the branch manually 
+- Heroku will display a build log- watch the build logs for any errors
+- Once the build process is completed Heroku displays 'Your App Was Successfully Deployed' message and a link to the app to visit the live site
+- As my first 2 build attempts failed I needed to apply changes to my code (I forgot to set up the static files and templates) to successfully deploy on the 3rd time 
+
+#### Forking the repository
+
+By forking the GitHub Repository you can make a copy of the original repository to view or change without it effecting the original repository. You can do this with following steps:
+
+- Log in to GitHub or create an account
+- Enter this [repository link](https://github.com/TulaUnogi/cat-beans-cafe)
+- Select "Fork" from the top of the repository
+- A copy of the repository should now be created in your own repository
+
+#### Create a clone of this repository
+
+Creating a clone enables you to make a copy of the current version of this repository to run the project locally. To do this follow steps below:
+
+- Navigate to https://github.com/TulaUnogi/cat-beans-cafe
+- Click on the <>Code button at the top of the list of files
+- Select the "HTTPS" option on the "Local" tab and copy the URL it provides to the clipboard
+- Navigate to your code editor and in the terminal change the directory to your chosen location 
+- Type "git clone" and paste the GitHub repository's link
+- Press enter and git will clone the repository for you
+
+##### [ Back to table of contents](#table-of-contents)
+
 # resources
 
 -  [Code Institute Full Stack Development course materials](https://codeinstitute.net/global/full-stack-software-development-diploma/?sitelink=FullStackDiploma-IRL&utm_term=code+institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288209&hsa_ad=635725005315&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code+institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=Cj0KCQiAgqGrBhDtARIsAM5s0_l13h8fkiqZeHnw16zshbX6svuL8YJNrw6G-RFdq03RQybQXLSoZiYaAjGqEALw_wcB) 
@@ -273,7 +384,7 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 - [Stack overflow](https://stackoverflow.com/)
 - [Slack](https://slack.com/intl/en-ie/)
   
-##### [ Back to Top ](#table-of-contents)
+##### [ Back to table of contents ](#table-of-contents)
 
 
 
@@ -283,7 +394,24 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 
 - Images : Unsplash
 - templates: code institute
-- 
+  
+  > Pictures
+
+- [Mid-coated Brown Cat](https://www.pexels.com/photo/mid-coated-brown-cat-982865/) by <b>Alena Koval</b> on Pexels
+- [Cat at the table](https://unsplash.com/photos/black-cat-on-white-table-ZxChxgJa6X0) by <b>Madalyn Cox</b> on Unsplash
+- [Cup of coffee](https://pixabay.com/photos/tea-cat-coffee-coffee-shop-cup-2343391/) by <b>yukiqwa</b> on Pixabay
+- [Black Steel Welcome Hanging Signage](https://www.pexels.com/photo/black-steel-welcome-hanging-signage-1406282/) by <b>Henry & Co.</b> on Pexels
+- [Menu background](https://pixabay.com/photos/coffee-mug-heart-caffeine-food-5176961/) by <b>Konrad Janik</b> on Pixabay
+
+- Cat carousel pictures:
+  1. [Fluffy black cat](https://pixabay.com/photos/couch-cat-pet-feline-animal-6654015/) by <b>Spike Summers</b> on Pixabay 
+  2. [Calico cat](https://www.pexels.com/photo/calico-cat-1359300/) by <b>Cats Coming</b> on Pexels
+  3. [Orange tabby cat](https://www.pexels.com/photo/adorable-animal-cat-close-up-208930/) by <b>Pixabay</b> on Pexels
+  4. [Cat with a mouse toy](https://www.pexels.com/photo/cat-with-a-mouse-toy-3216568/) by <b>lil artsy</b> on Pexels
+  5. [Two cosy tabby cats](https://www.pexels.com/photo/two-tabby-kittens-lying-down-1787414/) by <b>Cats Comin</b> on Pexels
+  6. [Little kitten](https://www.pexels.com/photo/close-up-photo-of-orange-tabby-cat-2581153/) by <b>samer daboul</b> on Pexels
+  7. [Christmas kitten](https://www.pexels.com/photo/close-up-photography-of-white-cat-besides-christmas-lights-735423/) by <b>Eftodii Aurelia</b> on Pexels
+
 
 ## Acknowledgements
 
@@ -296,6 +424,7 @@ GitHub was selected as the deployment menthod and the GitHub repository was link
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+##### [ Back to table of contents ](#table-of-contents)
 
 
 
