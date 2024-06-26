@@ -1,5 +1,4 @@
-<img src="![logowwf](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0afe3128-79f2-43a7-9e0c-38750440edb7)
-"widht="50" height="50">
+![logowwf](https://github.com/Mvogtsinga/weekendfoodfoot/assets/152321059/0afe3128-79f2-43a7-9e0c-38750440edb7)
 
 
 # Welcome to WEEKENDFOODFOOT Restaurant <br>
@@ -205,6 +204,7 @@ I was testing for responsiveness on an Ideapad laptop and a Samsung Galaxy A5 us
 | User can create profile | Pass |
 | User can log into profile | Pass |
 | User can log out of profile | Pass |
+| User can delete profile     |Pass|
 | Messages are displaying | Pass |
 | Messages are dismissable by button and timeout | Pass |
 
@@ -383,6 +383,8 @@ Creating a clone enables you to make a copy of the current version of this repos
 - [Bootstrap docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Stack overflow](https://stackoverflow.com/)
 - [Slack](https://slack.com/intl/en-ie/)
+- [Create Django project]( https://www.geeksforgeeks.org/how-to-create-a-django-project/)
+- [Heroku_Deployment]{https://devcenter.heroku.com/articles/github-integration#:~:text=You%20can%20configure%20GitHub%20integration,to%20configure%20automatic%20GitHub%20deploys.}
   
 ##### [ Back to table of contents ](#table-of-contents)
 
